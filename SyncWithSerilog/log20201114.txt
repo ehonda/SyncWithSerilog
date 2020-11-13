@@ -1,0 +1,55 @@
+{"@t":"2020-11-14T00:03:36.1413571+01:00","@l":"Information","@m":"Starting web host"}
+{"@t":"2020-11-14T00:03:38.1877382+01:00","@l":"Information","@m":"Now listening on: https://localhost:5001","address":"https://localhost:5001","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:03:38.1930891+01:00","@l":"Information","@m":"Now listening on: http://localhost:5000","address":"http://localhost:5000","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:03:38.1940450+01:00","@l":"Information","@m":"Application started. Press Ctrl+C to shut down.","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:03:38.2349363+01:00","@l":"Information","@m":"Hosting environment: Development","envName":"Development","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:03:38.2352160+01:00","@l":"Information","@m":"Content root path: C:\\Users\\dennis\\source\\repos\\test_projects\\SyncWithSerilog\\SyncWithSerilog","contentRoot":"C:\\Users\\dennis\\source\\repos\\test_projects\\SyncWithSerilog\\SyncWithSerilog","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:04:48.8767455+01:00","@l":"Information","@m":"Application is shutting down...","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:04:56.8896127+01:00","@l":"Information","@m":"Starting web host"}
+{"@t":"2020-11-14T00:04:58.6338518+01:00","@l":"Information","@m":"Now listening on: https://localhost:5001","address":"https://localhost:5001","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:04:58.6388380+01:00","@l":"Information","@m":"Now listening on: http://localhost:5000","address":"http://localhost:5000","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:04:58.6397166+01:00","@l":"Information","@m":"Application started. Press Ctrl+C to shut down.","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:04:58.6399871+01:00","@l":"Information","@m":"Hosting environment: Development","envName":"Development","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:04:58.6402353+01:00","@l":"Information","@m":"Content root path: C:\\Users\\dennis\\source\\repos\\test_projects\\SyncWithSerilog\\SyncWithSerilog","contentRoot":"C:\\Users\\dennis\\source\\repos\\test_projects\\SyncWithSerilog\\SyncWithSerilog","SourceContext":"Microsoft.Hosting.Lifetime"}
+{"@t":"2020-11-14T00:05:03.6308946+01:00","@l":"Information","@m":"Application is shutting down...","SourceContext":"Microsoft.Hosting.Lifetime"}
+2020-11-14 00:06:46.206 +01:00 [INF] Starting web host
+2020-11-14 00:06:47.814 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-14 00:06:47.820 +01:00 [INF] Now listening on: http://localhost:5000
+2020-11-14 00:06:47.822 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-14 00:06:47.823 +01:00 [INF] Hosting environment: Development
+2020-11-14 00:06:47.824 +01:00 [INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+2020-11-14 00:06:49.988 +01:00 [INF] Application is shutting down...
+2020-11-14 00:07:38.222 +01:00 [INF] Starting web host
+2020-11-14 00:07:40.525 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-14 00:07:40.531 +01:00 [INF] Now listening on: http://localhost:5000
+2020-11-14 00:07:40.533 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-14 00:07:40.534 +01:00 [INF] Hosting environment: Development
+2020-11-14 00:07:40.535 +01:00 [INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+2020-11-14 00:07:42.215 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+2020-11-14 00:07:42.250 +01:00 [INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-14 00:07:42.278 +01:00 [INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+2020-11-14 00:07:42.287 +01:00 [INF] "UploadSucceeded" {Properties}
+2020-11-14 00:07:42.297 +01:00 [ERR] "UploadFailed" {Properties}
+2020-11-14 00:07:42.299 +01:00 [INF] "UploadSucceeded" {Properties}
+2020-11-14 00:07:42.300 +01:00 [ERR] "UploadFailed" {Properties}
+2020-11-14 00:07:42.313 +01:00 [INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 19.976ms
+2020-11-14 00:07:42.316 +01:00 [INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-14 00:07:42.334 +01:00 [INF] Request finished in 123.189ms 200 
+2020-11-14 00:07:50.489 +01:00 [INF] Application is shutting down...
+[00:09:53 INF] - Starting web host {  }
+[00:09:55 INF] - Now listening on: "https://localhost:5001" { SourceContext: "Microsoft.Hosting.Lifetime" }
+[00:09:55 INF] - Now listening on: "http://localhost:5000" { SourceContext: "Microsoft.Hosting.Lifetime" }
+[00:09:55 INF] - Application started. Press Ctrl+C to shut down. { SourceContext: "Microsoft.Hosting.Lifetime" }
+[00:09:55 INF] - Hosting environment: "Development" { SourceContext: "Microsoft.Hosting.Lifetime" }
+[00:09:55 INF] - Content root path: "C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog" { SourceContext: "Microsoft.Hosting.Lifetime" }
+[00:10:05 INF] - Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0 { Protocol: "HTTP/1.1", Method: "POST", ContentType: null, ContentLength: 0, Scheme: "https", Host: "localhost:5001", PathBase: "", Path: "/api/articlesynchronizer", QueryString: "", EventId: { Id: 1 }, SourceContext: "Microsoft.AspNetCore.Hosting.Diagnostics", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - Executing endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"' { EventId: { Name: "ExecutingEndpoint" }, SourceContext: "Microsoft.AspNetCore.Routing.EndpointMiddleware", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - Route matched with "{action = \"Post\", controller = \"ArticleSynchronizer\"}". Executing controller action with signature "Void Post()" on controller "SyncWithSerilog.Controllers.ArticleSynchronizerController" ("SyncWithSerilog"). { EventId: { Id: 3, Name: "ControllerActionExecuting" }, SourceContext: "Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker", ActionId: "4936af44-26e2-4efa-b724-8ee8013c507d", ActionName: "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 ERR] - UploadFailed {Properties} { @Article: "SyncWithSerilog.Models.Article", ActionId: "4936af44-26e2-4efa-b724-8ee8013c507d", ActionName: "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - UploadSucceeded {Properties} { @Article: "SyncWithSerilog.Models.Article", ActionId: "4936af44-26e2-4efa-b724-8ee8013c507d", ActionName: "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - UploadSucceeded {Properties} { @Article: "SyncWithSerilog.Models.Article", ActionId: "4936af44-26e2-4efa-b724-8ee8013c507d", ActionName: "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 ERR] - UploadFailed {Properties} { @Article: "SyncWithSerilog.Models.Article", ActionId: "4936af44-26e2-4efa-b724-8ee8013c507d", ActionName: "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - Executed action "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)" in 67.3497ms { EventId: { Id: 2, Name: "ActionExecuted" }, SourceContext: "Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker", ActionId: "4936af44-26e2-4efa-b724-8ee8013c507d", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - Executed endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"' { EventId: { Id: 1, Name: "ExecutedEndpoint" }, SourceContext: "Microsoft.AspNetCore.Routing.EndpointMiddleware", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:05 INF] - Request finished in 358.5264ms 200  { ElapsedMilliseconds: 358.5264, StatusCode: 200, ContentType: null, EventId: { Id: 2 }, SourceContext: "Microsoft.AspNetCore.Hosting.Diagnostics", RequestId: "0HM48550S34BB:00000001", RequestPath: "/api/articlesynchronizer", SpanId: "|670e27ac-4b60a604d38813d9.", TraceId: "670e27ac-4b60a604d38813d9", ParentId: "", ConnectionId: "0HM48550S34BB" }
+[00:10:23 INF] - Application is shutting down... { SourceContext: "Microsoft.Hosting.Lifetime" }

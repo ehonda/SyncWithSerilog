@@ -32,9 +32,9 @@ namespace SyncWithSerilog.Synchronizer
                 using (LogContext.PushProperty("@Article", article))
                 {
                     if (UploadArticle(article))
-                        Log.Logger.Information("{@Article} {@Event}", article, Event.UploadSucceeded);
+                        Log.Logger.Information("{@Event} {Properties}", Event.UploadSucceeded);
                     else
-                        Log.Logger.Error("{@Article} {@Event}", article, Event.UploadFailed);
+                        Log.Logger.Error("{@Event} {Properties}", Event.UploadFailed);
                 }
                 
         }
