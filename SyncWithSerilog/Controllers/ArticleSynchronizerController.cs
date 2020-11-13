@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using SyncWithSerilog.Synchronizer;
 
 namespace SyncWithSerilog.Controllers
 {
@@ -7,11 +7,16 @@ namespace SyncWithSerilog.Controllers
     [ApiController]
     public class ArticleSynchronizerController : ControllerBase
     {
+        private readonly ArticleSynchronizer _articleSynchronizer;
+
+        public ArticleSynchronizerController(ArticleSynchronizer articleSynchronizer)
+            => _articleSynchronizer = articleSynchronizer;
 
         // POST api/<ArticleSynchronizerController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post()
         {
+            _articleSynchronizer.Run();
         }
     }
 }
