@@ -45,3 +45,122 @@
 2020-11-13 23:18:19.677 +01:00 [INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
 2020-11-13 23:18:19.679 +01:00 [INF] Request finished in 35.2512ms 200 
 2020-11-13 23:18:22.313 +01:00 [INF] Application is shutting down...
+2020-11-13 23:30:08.740 +01:00 [INF] Starting web host
+2020-11-13 23:30:10.922 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-13 23:30:10.927 +01:00 [INF] Now listening on: http://localhost:5000
+2020-11-13 23:30:10.929 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-13 23:30:10.930 +01:00 [INF] Hosting environment: Development
+2020-11-13 23:30:10.931 +01:00 [INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+2020-11-13 23:30:13.847 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+2020-11-13 23:30:13.894 +01:00 [INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:30:13.957 +01:00 [INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+2020-11-13 23:30:13.964 +01:00 [ERR] "UploadFailed"
+2020-11-13 23:30:13.970 +01:00 [ERR] "UploadFailed"
+2020-11-13 23:30:13.972 +01:00 [INF] "UploadSucceeded"
+2020-11-13 23:30:13.973 +01:00 [ERR] "UploadFailed"
+2020-11-13 23:30:13.979 +01:00 [INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 15.2561ms
+2020-11-13 23:30:13.984 +01:00 [INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:30:14.000 +01:00 [INF] Request finished in 159.6862ms 200 
+2020-11-13 23:30:47.249 +01:00 [INF] Application is shutting down...
+2020-11-13 23:31:14.472 +01:00 [INF] Starting web host
+2020-11-13 23:31:16.460 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-13 23:31:16.481 +01:00 [INF] Now listening on: http://localhost:5000
+2020-11-13 23:31:16.484 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-13 23:31:16.485 +01:00 [INF] Hosting environment: Development
+2020-11-13 23:31:16.487 +01:00 [INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+2020-11-13 23:31:19.768 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+2020-11-13 23:31:19.808 +01:00 [INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:31:19.881 +01:00 [INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+2020-11-13 23:31:19.890 +01:00 [INF] "UploadSucceeded" {@Event}
+2020-11-13 23:31:19.895 +01:00 [INF] "UploadSucceeded" {@Event}
+2020-11-13 23:31:19.896 +01:00 [ERR] "UploadFailed" {@Event}
+2020-11-13 23:31:19.897 +01:00 [INF] "UploadSucceeded" {@Event}
+2020-11-13 23:31:19.907 +01:00 [INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 15.4001ms
+2020-11-13 23:31:19.910 +01:00 [INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:31:19.926 +01:00 [INF] Request finished in 160.0901ms 200 
+2020-11-13 23:31:38.879 +01:00 [INF] Application is shutting down...
+[23:34:03 INF]   - Starting web host
+[23:34:04 INF]   - Now listening on: "https://localhost:5001"
+[23:34:04 INF]   - Now listening on: "http://localhost:5000"
+[23:34:04 INF]   - Application started. Press Ctrl+C to shut down.
+[23:34:04 INF]   - Hosting environment: "Development"
+[23:34:04 INF]   - Content root path: "C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog"
+[23:34:20 INF]   - Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[23:34:20 INF]   - Executing endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"'
+[23:34:20 INF]   - Route matched with "{action = \"Post\", controller = \"ArticleSynchronizer\"}". Executing controller action with signature "Void Post()" on controller "SyncWithSerilog.Controllers.ArticleSynchronizerController" ("SyncWithSerilog").
+[23:34:20 INF]  UploadSucceeded - UploadSucceeded
+[23:34:20 INF]  UploadSucceeded - UploadSucceeded
+[23:34:20 ERR]  UploadFailed - UploadFailed
+[23:34:20 INF]  UploadSucceeded - UploadSucceeded
+[23:34:20 INF]   - Executed action "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)" in 16.7825ms
+[23:34:20 INF]   - Executed endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"'
+[23:34:20 INF]   - Request finished in 177.9938ms 200 
+[23:34:43 INF]   - Application is shutting down...
+[23:34:48 INF]   - Starting web host
+[23:34:50 INF]   - Now listening on: "https://localhost:5001"
+[23:34:50 INF]   - Now listening on: "http://localhost:5000"
+[23:34:50 INF]   - Application started. Press Ctrl+C to shut down.
+[23:34:50 INF]   - Hosting environment: "Development"
+[23:34:50 INF]   - Content root path: "C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog"
+[23:34:51 INF]   - Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[23:34:52 INF]   - Executing endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"'
+[23:34:52 INF]   - Route matched with "{action = \"Post\", controller = \"ArticleSynchronizer\"}". Executing controller action with signature "Void Post()" on controller "SyncWithSerilog.Controllers.ArticleSynchronizerController" ("SyncWithSerilog").
+[23:34:52 INF] SyncWithSerilog.Models.Article UploadSucceeded - UploadSucceeded
+[23:34:52 INF] SyncWithSerilog.Models.Article UploadSucceeded - UploadSucceeded
+[23:34:52 ERR] SyncWithSerilog.Models.Article UploadFailed - UploadFailed
+[23:34:52 INF] SyncWithSerilog.Models.Article UploadSucceeded - UploadSucceeded
+[23:34:52 INF]   - Executed action "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)" in 16.2651ms
+[23:34:52 INF]   - Executed endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"'
+[23:34:52 INF]   - Request finished in 168.7692ms 200 
+[23:35:00 INF]   - Application is shutting down...
+[23:35:15 INF]   - Starting web host
+[23:35:16 INF]   - Now listening on: "https://localhost:5001"
+[23:35:16 INF]   - Now listening on: "http://localhost:5000"
+[23:35:16 INF]   - Application started. Press Ctrl+C to shut down.
+[23:35:16 INF]   - Hosting environment: "Development"
+[23:35:16 INF]   - Content root path: "C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog"
+[23:35:18 INF]   - Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[23:35:18 INF]   - Executing endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"'
+[23:35:18 INF]   - Route matched with "{action = \"Post\", controller = \"ArticleSynchronizer\"}". Executing controller action with signature "Void Post()" on controller "SyncWithSerilog.Controllers.ArticleSynchronizerController" ("SyncWithSerilog").
+[23:35:18 INF]  UploadSucceeded - UploadSucceeded
+[23:35:18 INF]  UploadSucceeded - UploadSucceeded
+[23:35:18 INF]  UploadSucceeded - UploadSucceeded
+[23:35:18 ERR]  UploadFailed - UploadFailed
+[23:35:18 INF]   - Executed action "SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)" in 20.8009ms
+[23:35:18 INF]   - Executed endpoint '"SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)"'
+[23:35:18 INF]   - Request finished in 221.3474ms 200 
+[23:35:28 INF]   - Application is shutting down...
+2020-11-13 23:36:21.673 +01:00 [INF] Starting web host
+2020-11-13 23:36:24.014 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-13 23:36:24.022 +01:00 [INF] Now listening on: http://localhost:5000
+2020-11-13 23:36:24.024 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-13 23:36:24.025 +01:00 [INF] Hosting environment: Development
+2020-11-13 23:36:24.027 +01:00 [INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+2020-11-13 23:36:25.688 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+2020-11-13 23:36:25.731 +01:00 [INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:36:25.795 +01:00 [INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+2020-11-13 23:36:25.802 +01:00 [ERR] "UploadFailed"
+2020-11-13 23:36:25.811 +01:00 [INF] "UploadSucceeded"
+2020-11-13 23:36:25.812 +01:00 [INF] "UploadSucceeded"
+2020-11-13 23:36:25.813 +01:00 [INF] "UploadSucceeded"
+2020-11-13 23:36:25.821 +01:00 [INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 16.7728ms
+2020-11-13 23:36:25.825 +01:00 [INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:36:25.840 +01:00 [INF] Request finished in 156.8674ms 200 
+2020-11-13 23:36:28.116 +01:00 [INF] Application is shutting down...
+2020-11-13 23:37:18.327 +01:00 [INF] Starting web host
+2020-11-13 23:37:20.500 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-13 23:37:20.513 +01:00 [INF] Now listening on: http://localhost:5000
+2020-11-13 23:37:20.515 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-13 23:37:20.517 +01:00 [INF] Hosting environment: Development
+2020-11-13 23:37:20.518 +01:00 [INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+2020-11-13 23:37:21.580 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+2020-11-13 23:37:21.618 +01:00 [INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:37:21.681 +01:00 [INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+2020-11-13 23:37:21.696 +01:00 [ERR] {"Sku":"100","$type":"Article"} "UploadFailed"
+2020-11-13 23:37:21.711 +01:00 [INF] {"Sku":"101","$type":"Article"} "UploadSucceeded"
+2020-11-13 23:37:21.714 +01:00 [ERR] {"Sku":"102","$type":"Article"} "UploadFailed"
+2020-11-13 23:37:21.722 +01:00 [ERR] {"Sku":"103","$type":"Article"} "UploadFailed"
+2020-11-13 23:37:21.732 +01:00 [INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 41.9123ms
+2020-11-13 23:37:21.741 +01:00 [INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+2020-11-13 23:37:21.768 +01:00 [INF] Request finished in 190.7297ms 200 
+2020-11-13 23:37:31.618 +01:00 [INF] Application is shutting down...

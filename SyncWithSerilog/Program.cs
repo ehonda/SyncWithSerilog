@@ -10,14 +10,18 @@ namespace SyncWithSerilog
     {
         public static void Main(string[] args)
         {
+            //var outputTemplate = "[{Timestamp:HH:mm:ss} {Level:u3}] {Article} {Event} - {Message}{NewLine}{Exception}";
+
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .Enrich.FromLogContext()
-                .WriteTo.Console()
+                .WriteTo.Console(
+                    /*outputTemplate: outputTemplate*/)
                 .WriteTo.File(
                     "log.txt",
-                    rollingInterval: RollingInterval.Day)
+                    rollingInterval: RollingInterval.Day/*,*/
+                    /*outputTemplate: outputTemplate*/)
                 .CreateLogger();
 
             try

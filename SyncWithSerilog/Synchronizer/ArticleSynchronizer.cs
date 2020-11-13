@@ -1,5 +1,7 @@
 ﻿using Serilog;
+using Serilog.Context;
 using SyncWithSerilog.Models;
+using SyncWithSerilog.Synchronizer.LogEvents;
 using System;
 using System.Collections.Generic;
 
@@ -27,10 +29,14 @@ namespace SyncWithSerilog.Synchronizer
         private void UploadArticles(IEnumerable<Article> articles)
         {
             foreach (var article in articles)
-                if (UploadArticle(article))
-                    Log.Logger.Information("Upload of article {@Article} succeeded", article);
-                else
-                    Log.Logger.Error("Upload of article {@Article} failed", article);
+                using (LogContext.PushProperty("@Article", article))
+                {
+                    if (UploadArticle(article))
+                        Log.Logger.Information("{@Article} {@Event}", article, Event.UploadSucceeded);
+                    else
+                        Log.Logger.Error("{@Article} {@Event}", article, Event.UploadFailed);
+                }
+                
         }
 
         private bool UploadArticle(Article article)
