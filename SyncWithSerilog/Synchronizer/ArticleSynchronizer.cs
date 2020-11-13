@@ -29,14 +29,18 @@ namespace SyncWithSerilog.Synchronizer
         private void UploadArticles(IEnumerable<Article> articles)
         {
             foreach (var article in articles)
-                using (LogContext.PushProperty("@Article", article))
+                using (LogContext.PushProperty("Article", article, true))
                 {
                     if (UploadArticle(article))
-                        Log.Logger.Information("{@Event} {Properties}", Event.UploadSucceeded);
+                        Log
+                            .ForContext("Event", Event.UploadSucceeded)
+                            .Information("{Event} for {Article}");
                     else
-                        Log.Logger.Error("{@Event} {Properties}", Event.UploadFailed);
+                        Log
+                            .ForContext("Event", Event.UploadFailed)
+                            .Error("{Event} for {Article}", Event.UploadFailed);
                 }
-                
+
         }
 
         private bool UploadArticle(Article article)

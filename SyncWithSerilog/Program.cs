@@ -11,7 +11,10 @@ namespace SyncWithSerilog
     {
         public static void Main(string[] args)
         {
-            //var outputTemplate = "[{Timestamp:HH:mm:ss} {Level:u3}] - {Message} {Properties}{NewLine}{Exception}";
+            var outputTemplate = 
+                "[{Timestamp:HH:mm:ss} {Level:u3}] " +
+                "{Message:lj}{NewLine}{Exception}";
+            //"{Message:lj} {@Article}{NewLine}{Exception}";
             //var expressionTemplate = new ExpressionTemplate(
             //    "{ {@t, @l, @m, @x, ..@p} }\n");
 
@@ -21,12 +24,12 @@ namespace SyncWithSerilog
                 .Enrich.FromLogContext()
                 .WriteTo.Console(
                     /*expressionTemplate*/
-                    /*outputTemplate: outputTemplate*/)
+                    outputTemplate: outputTemplate)
                 .WriteTo.File(
                     //expressionTemplate,
                     "log.txt",
-                    rollingInterval: RollingInterval.Day/*,*/
-                    /*outputTemplate: outputTemplate*/)
+                    rollingInterval: RollingInterval.Day,
+                    outputTemplate: outputTemplate)
                 .CreateLogger();
 
             try
