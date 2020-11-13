@@ -1,4 +1,5 @@
-﻿using SyncWithSerilog.Models;
+﻿using Serilog;
+using SyncWithSerilog.Models;
 using System;
 using System.Collections.Generic;
 
@@ -27,9 +28,9 @@ namespace SyncWithSerilog.Synchronizer
         {
             foreach (var article in articles)
                 if (UploadArticle(article))
-                    Console.WriteLine($"Upload of article {article.Sku} succeeded");
+                    Log.Logger.Information("Upload of article {@Article} succeeded", article);
                 else
-                    Console.WriteLine($"Upload of article {article.Sku} failed");
+                    Log.Logger.Error("Upload of article {@Article} failed", article);
         }
 
         private bool UploadArticle(Article article)

@@ -15,6 +15,9 @@ namespace SyncWithSerilog
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
+                .WriteTo.File(
+                    "log.txt",
+                    rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             try
