@@ -1,7 +1,7 @@
 ﻿using Serilog;
 using Serilog.Context;
+using SyncWithSerilog.Logging.Events;
 using SyncWithSerilog.Models;
-using SyncWithSerilog.Synchronizer.LogEvents;
 using System;
 using System.Collections.Generic;
 
