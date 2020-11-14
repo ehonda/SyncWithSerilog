@@ -295,3 +295,70 @@
 [18:11:56 INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
 [18:11:56 INF] Request finished in 220.7074ms 200 
 [18:14:07 INF] Application is shutting down...
+[18:16:18 INF] Starting web host
+[18:16:20 INF] Now listening on: https://localhost:5001
+[18:16:20 INF] Now listening on: http://localhost:5000
+[18:16:20 INF] Application started. Press Ctrl+C to shut down.
+[18:16:20 INF] Hosting environment: Development
+[18:16:20 INF] Content root path: C:\Users\dennis\source\repos\test_projects\SyncWithSerilog\SyncWithSerilog
+[18:16:24 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[18:16:24 INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:24 INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+[18:16:24 INF] "SyncStarted"
+[18:16:24 INF] "UploadSucceeded" for {"Sku":"100","$type":"Article"}
+[18:16:24 INF] "UploadSucceeded" for {"Sku":"101","$type":"Article"}
+[18:16:24 INF] "UploadSucceeded" for {"Sku":"102","$type":"Article"}
+[18:16:24 INF] "UploadSucceeded" for {"Sku":"103","$type":"Article"}
+[18:16:24 INF] "SyncEnded"
+[18:16:24 INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 30.414ms
+[18:16:24 INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:24 INF] Request finished in 180.4295ms 200 
+[18:16:30 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[18:16:30 INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:30 INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+[18:16:31 INF] "SyncStarted"
+[18:16:31 INF] "UploadSucceeded" for {"Sku":"100","$type":"Article"}
+[18:16:31 INF] "UploadSucceeded" for {"Sku":"101","$type":"Article"}
+[18:16:31 INF] "UploadSucceeded" for {"Sku":"102","$type":"Article"}
+[18:16:31 INF] "UploadSucceeded" for {"Sku":"103","$type":"Article"}
+[18:16:31 INF] "SyncEnded"
+[18:16:31 INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 20.7889ms
+[18:16:31 INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:31 INF] Request finished in 33.9497ms 200 
+[18:16:33 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[18:16:33 INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:33 INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+[18:16:33 INF] "SyncStarted"
+[18:16:33 ERR] "UploadFailed" for {"Sku":"100","$type":"Article"}
+[18:16:33 ERR] "UploadFailed" for {"Sku":"101","$type":"Article"}
+[18:16:33 ERR] "UploadFailed" for {"Sku":"102","$type":"Article"}
+[18:16:33 INF] "UploadSucceeded" for {"Sku":"103","$type":"Article"}
+[18:16:33 INF] "SyncEnded"
+[18:16:33 INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 33.7413ms
+[18:16:33 INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:33 INF] Request finished in 70.4172ms 200 
+[18:16:37 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[18:16:37 INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:37 INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+[18:16:37 INF] "SyncStarted"
+[18:16:37 INF] "UploadSucceeded" for {"Sku":"100","$type":"Article"}
+[18:16:37 ERR] "UploadFailed" for {"Sku":"101","$type":"Article"}
+[18:16:37 ERR] "UploadFailed" for {"Sku":"102","$type":"Article"}
+[18:16:37 INF] "UploadSucceeded" for {"Sku":"103","$type":"Article"}
+[18:16:37 INF] "SyncEnded"
+[18:16:37 INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 47.2445ms
+[18:16:37 INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:37 INF] Request finished in 65.7965ms 200 
+[18:16:39 INF] Request starting HTTP/1.1 POST https://localhost:5001/api/articlesynchronizer  0
+[18:16:39 INF] Executing endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:39 INF] Route matched with {action = "Post", controller = "ArticleSynchronizer"}. Executing controller action with signature Void Post() on controller SyncWithSerilog.Controllers.ArticleSynchronizerController (SyncWithSerilog).
+[18:16:39 INF] "SyncStarted"
+[18:16:39 ERR] "UploadFailed" for {"Sku":"100","$type":"Article"}
+[18:16:39 ERR] "UploadFailed" for {"Sku":"101","$type":"Article"}
+[18:16:39 ERR] "UploadFailed" for {"Sku":"102","$type":"Article"}
+[18:16:39 ERR] "UploadFailed" for {"Sku":"103","$type":"Article"}
+[18:16:39 INF] "SyncEnded"
+[18:16:39 INF] Executed action SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog) in 33.815ms
+[18:16:39 INF] Executed endpoint 'SyncWithSerilog.Controllers.ArticleSynchronizerController.Post (SyncWithSerilog)'
+[18:16:39 INF] Request finished in 153.219ms 200 
+[18:16:44 INF] Application is shutting down...
