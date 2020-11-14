@@ -47,7 +47,7 @@ namespace SyncWithSerilog.Synchronizer
                         Log
                             .ForContext("Event", Event.UploadFailed)
                             .ForContext("Alert", 1)
-                            .Error("{Event} for {Article}", Event.UploadFailed);
+                            .Error("{Event} for {Article}");
                 }
         }
 
