@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
+using Serilog.Sinks.Elasticsearch;
 using Serilog.Templates;
 using System;
 
@@ -14,6 +15,7 @@ namespace SyncWithSerilog
             var outputTemplate = 
                 "[{Timestamp:HH:mm:ss} {Level:u3}] " +
                 "{Message:lj}{NewLine}{Exception}";
+
             //"{Message:lj} {@Article}{NewLine}{Exception}";
             //var expressionTemplate = new ExpressionTemplate(
             //    "{ {@t, @l, @m, @x, ..@p} }\n");
@@ -23,13 +25,17 @@ namespace SyncWithSerilog
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .Enrich.FromLogContext()
                 .WriteTo.Console(
-                    /*expressionTemplate*/
                     outputTemplate: outputTemplate)
                 .WriteTo.File(
-                    //expressionTemplate,
                     "log.txt",
                     rollingInterval: RollingInterval.Day,
                     outputTemplate: outputTemplate)
+                .WriteTo.Elasticsearch(
+                    new ElasticsearchSinkOptions(new Uri("http://invalid:0000"))
+                    {
+                        AutoRegisterTemplate = true,
+                        BufferBaseFilename = "elasticbuffer",
+                    })
                 .CreateLogger();
 
             try
