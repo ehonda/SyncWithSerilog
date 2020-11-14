@@ -2,7 +2,9 @@
 {
     public enum Event
     {
+        SyncStarted,
         UploadSucceeded,
-        UploadFailed
+        UploadFailed,
+        SyncEnded
     }
 }

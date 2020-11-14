@@ -13,8 +13,16 @@ namespace SyncWithSerilog.Synchronizer
 
         public void Run()
         {
+            Log
+                .ForContext("Event", Event.SyncStarted)
+                .Information("{Event}");
+
             var articles = GetArticles();
             UploadArticles(articles);
+
+            Log
+                .ForContext("Event", Event.SyncEnded)
+                .Information("{Event}");
         }
 
         private IEnumerable<Article> GetArticles()
@@ -40,7 +48,6 @@ namespace SyncWithSerilog.Synchronizer
                             .ForContext("Event", Event.UploadFailed)
                             .Error("{Event} for {Article}", Event.UploadFailed);
                 }
-
         }
 
         private bool UploadArticle(Article article)
