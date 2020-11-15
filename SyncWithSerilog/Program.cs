@@ -31,7 +31,7 @@ namespace SyncWithSerilog
                     rollingInterval: RollingInterval.Day,
                     outputTemplate: outputTemplate)
                 .WriteTo.Elasticsearch(
-                    new ElasticsearchSinkOptions(new Uri("http://invalid:0000"))
+                    new ElasticsearchSinkOptions(new Uri("http://localhost:0000"))
                     {
                         AutoRegisterTemplate = true,
                         BufferBaseFilename = "elasticbuffer",
