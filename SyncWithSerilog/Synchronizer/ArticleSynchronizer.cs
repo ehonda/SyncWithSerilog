@@ -15,14 +15,14 @@ namespace SyncWithSerilog.Synchronizer
         {
             Log
                 .ForContext("Event", Event.SyncStarted)
-                .Information("{Event}");
+                .Information("{Event:L}");
 
             var articles = GetArticles();
             UploadArticles(articles);
 
             Log
                 .ForContext("Event", Event.SyncEnded)
-                .Information("{Event}");
+                .Information("{Event:L}");
         }
 
         private IEnumerable<Article> GetArticles()
@@ -42,12 +42,12 @@ namespace SyncWithSerilog.Synchronizer
                     if (UploadArticle(article))
                         Log
                             .ForContext("Event", Event.UploadSucceeded)
-                            .Information("{Event} for {Article}");
+                            .Information("{Event:L} for {Article}");
                     else
                         Log
                             .ForContext("Event", Event.UploadFailed)
                             .ForContext("Alert", 1)
-                            .Error("{Event} for {Article}");
+                            .Error("{Event:L} for {Article}");
                 }
         }
 

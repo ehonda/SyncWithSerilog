@@ -4,6 +4,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Elasticsearch;
 using Serilog.Templates;
+using SyncWithSerilog.Logging.FormatProviders;
 using System;
 
 namespace SyncWithSerilog
@@ -25,16 +26,19 @@ namespace SyncWithSerilog
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .Enrich.FromLogContext()
                 .WriteTo.Console(
-                    outputTemplate: outputTemplate)
+                    outputTemplate: outputTemplate,
+                    formatProvider: new EventFormatter())
                 .WriteTo.File(
                     "log.txt",
                     rollingInterval: RollingInterval.Day,
-                    outputTemplate: outputTemplate)
+                    outputTemplate: outputTemplate,
+                    formatProvider: new EventFormatter())
                 .WriteTo.Elasticsearch(
                     new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
                     {
                         AutoRegisterTemplate = true,
                         BufferBaseFilename = "elasticbuffer",
+                        FormatProvider = new EventFormatter()
                     })
                 .CreateLogger();
 
