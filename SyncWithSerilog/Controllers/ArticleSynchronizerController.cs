@@ -18,8 +18,10 @@ namespace SyncWithSerilog.Controllers
         [HttpPost]
         public void Post([FromQuery] ArticleSynchronizationRequestFilter filter)
         {
-            Log.Logger.Information("Article synchronization requested for {Count} articles",
-                filter?.Count ?? 0);
+            Log.Logger.Information(
+                "Article synchronization requested for {Count} articles with success rate {SuccessRate}",
+                filter?.Count ?? 0,
+                filter?.SuccessRate ?? .5);
             _articleSynchronizer.Run(filter!);
         }
     }

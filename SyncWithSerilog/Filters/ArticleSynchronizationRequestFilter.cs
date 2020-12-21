@@ -1,6 +1,6 @@
 ﻿namespace SyncWithSerilog.Filters
 {
-    public record ArticleSynchronizationRequestFilter(int? Count)
+    public record ArticleSynchronizationRequestFilter(int? Count, double? SuccessRate)
     {
     }
 }
