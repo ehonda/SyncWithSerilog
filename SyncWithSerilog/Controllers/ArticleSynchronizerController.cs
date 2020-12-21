@@ -20,7 +20,7 @@ namespace SyncWithSerilog.Controllers
         {
             Log.Logger.Information("Article synchronization requested for {Count} articles",
                 filter?.Count ?? 0);
-            _articleSynchronizer.Run();
+            _articleSynchronizer.Run(filter!);
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using Serilog;
 using Serilog.Context;
+using SyncWithSerilog.Filters;
 using SyncWithSerilog.Logging.Events;
 using SyncWithSerilog.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SyncWithSerilog.Synchronizer
 {
@@ -11,13 +13,13 @@ namespace SyncWithSerilog.Synchronizer
     {
         private readonly Random _rng = new Random();
 
-        public void Run()
+        public void Run(ArticleSynchronizationRequestFilter filter)
         {
             Log
                 .ForContext("Event", Event.SyncStarted)
                 .Information("{Event:L}");
 
-            var articles = GetArticles();
+            var articles = GetArticles(filter?.Count ?? 4);
             UploadArticles(articles);
 
             Log
@@ -25,14 +27,10 @@ namespace SyncWithSerilog.Synchronizer
                 .Information("{Event:L}");
         }
 
-        private IEnumerable<Article> GetArticles()
-            => new[]
-            {
-                new Article { Sku = "100" },
-                new Article { Sku = "101" },
-                new Article { Sku = "102" },
-                new Article { Sku = "103" }
-            };
+        private static IEnumerable<Article> GetArticles(int count)
+            => Enumerable
+                .Range(0, count)
+                .Select(number => new Article { Sku = (100 + number).ToString() });
 
         private void UploadArticles(IEnumerable<Article> articles)
         {
