@@ -4,6 +4,7 @@ using Serilog.Context;
 using SyncWithSerilog.Logging.Events;
 using SyncWithSerilog.Models;
 using SyncWithSerilog.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,17 +16,22 @@ namespace SyncWithSerilog.Synchronizer
 
         public void Run(ArticleSynchronizationRequest request)
         {
-            Log
-                .ForContext("Event", Event.SyncStarted)
-                .Information("{Event:L}");
+            using (LogContext.PushProperty("ArticleSynchronizationId", Guid.NewGuid().ToString()))
+            {
+                Log.Debug("Article synchronization id {ArticleSynchronizationId}");
 
-            _bernoulli = new(request.SuccessRate);
-            var articles = GetArticles(request.Count);
-            UploadArticles(articles);
+                Log
+                    .ForContext("Event", Event.SyncStarted)
+                    .Information("{Event:L}");
 
-            Log
-                .ForContext("Event", Event.SyncEnded)
-                .Information("{Event:L}");
+                _bernoulli = new(request.SuccessRate);
+                var articles = GetArticles(request.Count);
+                UploadArticles(articles);
+
+                Log
+                    .ForContext("Event", Event.SyncEnded)
+                    .Information("{Event:L}");
+            }
         }
 
         private static IEnumerable<Article> GetArticles(int count)
