@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Serilog;
+using SyncWithSerilog.Filters;
 using SyncWithSerilog.Synchronizer;
 
 namespace SyncWithSerilog.Controllers
@@ -14,8 +16,10 @@ namespace SyncWithSerilog.Controllers
 
         // POST api/<ArticleSynchronizerController>
         [HttpPost]
-        public void Post()
+        public void Post([FromQuery] ArticleSynchronizationRequestFilter filter)
         {
+            Log.Logger.Information("Article synchronization requested for {Count} articles",
+                filter?.Count ?? 0);
             _articleSynchronizer.Run();
         }
     }
