@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using SyncWithSerilog.Filters;
+using SyncWithSerilog.Requests;
 using SyncWithSerilog.Synchronizer;
 
 namespace SyncWithSerilog.Controllers
@@ -18,11 +19,11 @@ namespace SyncWithSerilog.Controllers
         [HttpPost]
         public void Post([FromQuery] ArticleSynchronizationRequestFilter filter)
         {
+            var request = ArticleSynchronizationRequest.FromFilter(filter);
             Log.Logger.Information(
                 "Article synchronization requested for {Count} articles with success rate {SuccessRate}",
-                filter?.Count ?? 0,
-                filter?.SuccessRate ?? .5);
-            _articleSynchronizer.Run(filter!);
+                request.Count, request.SuccessRate);
+            _articleSynchronizer.Run(request);
         }
     }
 }

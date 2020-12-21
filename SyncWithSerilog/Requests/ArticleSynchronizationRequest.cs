@@ -10,7 +10,7 @@ namespace SyncWithSerilog.Requests
             => filter switch
             {
                 null => throw new ArgumentNullException(nameof(filter)),
-                var (count, successRate) => new(count ?? 0, successRate ?? .5)
+                var (count, successRate) => new(count ?? 0, Math.Clamp(successRate ?? .5, 0, 1))
             };
     }
 }

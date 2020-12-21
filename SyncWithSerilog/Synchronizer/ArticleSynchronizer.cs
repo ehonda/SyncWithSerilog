@@ -1,9 +1,9 @@
 ﻿using MathNet.Numerics.Distributions;
 using Serilog;
 using Serilog.Context;
-using SyncWithSerilog.Filters;
 using SyncWithSerilog.Logging.Events;
 using SyncWithSerilog.Models;
+using SyncWithSerilog.Requests;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,13 +13,14 @@ namespace SyncWithSerilog.Synchronizer
     {
         private Bernoulli _bernoulli = new(.5);
 
-        public void Run(ArticleSynchronizationRequestFilter filter)
+        public void Run(ArticleSynchronizationRequest request)
         {
             Log
                 .ForContext("Event", Event.SyncStarted)
                 .Information("{Event:L}");
 
-            var articles = GetArticles(filter?.Count ?? 4);
+            _bernoulli = new(request.SuccessRate);
+            var articles = GetArticles(request.Count);
             UploadArticles(articles);
 
             Log
