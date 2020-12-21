@@ -1,9 +1,9 @@
-﻿using Serilog;
+﻿using MathNet.Numerics.Distributions;
+using Serilog;
 using Serilog.Context;
 using SyncWithSerilog.Filters;
 using SyncWithSerilog.Logging.Events;
 using SyncWithSerilog.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,7 +11,7 @@ namespace SyncWithSerilog.Synchronizer
 {
     public class ArticleSynchronizer
     {
-        private readonly Random _rng = new Random();
+        private Bernoulli _bernoulli = new(.5);
 
         public void Run(ArticleSynchronizationRequestFilter filter)
         {
@@ -50,6 +50,6 @@ namespace SyncWithSerilog.Synchronizer
         }
 
         private bool UploadArticle(Article article)
-            => _rng.Next(2) == 0;
+            => _bernoulli.Sample() == 1;
     }
 }
