@@ -29,7 +29,7 @@ namespace SyncWithSerilog
                     outputTemplate: outputTemplate,
                     formatProvider: new EventFormatter())
                 .WriteTo.File(
-                    "log.txt",
+                    ".logs/log.txt",
                     rollingInterval: RollingInterval.Day,
                     outputTemplate: outputTemplate,
                     formatProvider: new EventFormatter())
@@ -37,7 +37,7 @@ namespace SyncWithSerilog
                     new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
                     {
                         AutoRegisterTemplate = true,
-                        BufferBaseFilename = "elasticbuffer",
+                        BufferBaseFilename = ".logs/elasticbuffer",
                         FormatProvider = new EventFormatter()
                     })
                 .CreateLogger();
