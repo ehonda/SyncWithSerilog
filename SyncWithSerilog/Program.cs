@@ -3,7 +3,6 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Elasticsearch;
-using Serilog.Templates;
 using SyncWithSerilog.Logging.FormatProviders;
 using System;
 
@@ -13,6 +12,8 @@ namespace SyncWithSerilog
     {
         public static void Main(string[] args)
         {
+            Serilog.Debugging.SelfLog.Enable(Console.Error);
+
             var outputTemplate = 
                 "[{Timestamp:HH:mm:ss} {Level:u3}] " +
                 "{Message:lj}{NewLine}{Exception}";
@@ -38,7 +39,8 @@ namespace SyncWithSerilog
                     {
                         AutoRegisterTemplate = true,
                         BufferBaseFilename = ".logs/elasticbuffer",
-                        FormatProvider = new EventFormatter()
+                        FormatProvider = new EventFormatter(),
+                        IndexFormat = "article2-{0:yyyy.MM.dd}"
                     })
                 .CreateLogger();
 
