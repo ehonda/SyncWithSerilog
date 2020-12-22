@@ -39,7 +39,7 @@ namespace SyncWithSerilog
                     {
                         AutoRegisterTemplate = true,
                         BufferBaseFilename = ".logs/elasticbuffer",
-                        FormatProvider = new EventFormatter(),
+                        //FormatProvider = new EventFormatter(),
                         IndexFormat = "article2-{0:yyyy.MM.dd}"
                     })
                 .CreateLogger();

@@ -22,7 +22,7 @@ namespace SyncWithSerilog.Synchronizer
 
                 Log
                     .ForContext("Event", Event.SyncStarted)
-                    .Information("{Event:L}");
+                    .Information("{Event}");
 
                 _bernoulli = new(request.SuccessRate);
                 var articles = GetArticles(request.Count);
@@ -30,7 +30,7 @@ namespace SyncWithSerilog.Synchronizer
 
                 Log
                     .ForContext("Event", Event.SyncEnded)
-                    .Information("{Event:L}");
+                    .Information("{Event}");
             }
         }
 
@@ -47,12 +47,12 @@ namespace SyncWithSerilog.Synchronizer
                     if (UploadArticle(article))
                         Log
                             .ForContext("Event", Event.UploadSucceeded)
-                            .Information("{Event:L} for {Article}");
+                            .Information("{Event} for {Article}");
                     else
                         Log
                             .ForContext("Event", Event.UploadFailed)
                             .ForContext("Alert", 1)
-                            .Error("{Event:L} for {Article}");
+                            .Error("{Event} for {Article}");
                 }
         }
 
