@@ -38,6 +38,7 @@ namespace SyncWithSerilog
                     new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
                     {
                         AutoRegisterTemplate = true,
+                        AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv7,
                         BufferBaseFilename = ".logs/elasticbuffer",
                         //FormatProvider = new EventFormatter(),
                         IndexFormat = "article2-{0:yyyy.MM.dd}"
