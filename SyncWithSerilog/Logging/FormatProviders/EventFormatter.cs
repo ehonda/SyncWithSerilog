@@ -5,7 +5,7 @@ namespace SyncWithSerilog.Logging.FormatProviders
 {
     public class EventFormatter : IFormatProvider, ICustomFormatter
     {
-        public string Format(string format, object arg, IFormatProvider formatProvider)
+        public string Format(string? format, object? arg, IFormatProvider? formatProvider)
         {
             return arg switch
             {
@@ -19,7 +19,9 @@ namespace SyncWithSerilog.Logging.FormatProviders
                 IFormattable formattable
                     => formattable.ToString(format, formatProvider),
 
-                _ => arg.ToString()
+                null => "null",
+
+                _ => arg.ToString() ?? string.Empty
             };
 
             static string Format(Event @event) => @event switch
@@ -32,7 +34,7 @@ namespace SyncWithSerilog.Logging.FormatProviders
             };
         }
 
-        public object GetFormat(Type formatType)
+        public object? GetFormat(Type? formatType)
             => (formatType == typeof(ICustomFormatter)) ? this : null;
     }
 }
