@@ -2,6 +2,6 @@
 {
     public class Article
     {
-        public string Sku { get; set; }
+        public string Sku { get; set; } = string.Empty;
     }
 }
