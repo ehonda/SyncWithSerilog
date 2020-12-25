@@ -19,9 +19,7 @@ namespace SyncWithSerilog.Logging.FormatProviders
                 IFormattable formattable
                     => formattable.ToString(format, formatProvider),
 
-                null => "null",
-
-                _ => arg.ToString() ?? string.Empty
+                _ => arg?.ToString() ?? string.Empty
             };
 
             static string Format(Event @event) => @event switch
